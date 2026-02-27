@@ -40,7 +40,7 @@ import Header from './components/Header';
 import Discover from './pages/Discover';
 import LoginForm from './components/LoginForm';
 import { AnimatePresence, motion as Motion } from "framer-motion";
-import WatchListPage from './pages/WatchlistPage';
+import WatchListPage from './pages/WatchListPage';
 function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const [currentPage, setCurrentPage] = useState('discover');
