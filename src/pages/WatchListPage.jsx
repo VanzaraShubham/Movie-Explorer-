@@ -6,9 +6,8 @@ const WatchListPage = () => {
   const watchlist = useSelector((state) => state.movies.watchlist);
 
   return (
-    <div className="bg-gray-950 min-h-screen px-6 md:px-12 py-8 text-white">
-      <div className="flex items-center justify-between mb-8">
-        <h2 className="text-3xl font-bold">⭐ Your Watchlist</h2>
+    <div className="bg-gray-950 min-h-screen px-4 sm:px-6 md:px-12 py-8 text-white">
+<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">        <h2 className="text-3xl font-bold">⭐ Your Watchlist</h2>
 
         <Motion.span
           key={watchlist.length}
@@ -36,7 +35,7 @@ const WatchListPage = () => {
         {watchlist.length > 0 && (
           <Motion.div
             layout
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 "
           >
             {watchlist.map((movie) => (
               <Motion.div

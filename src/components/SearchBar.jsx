@@ -17,11 +17,10 @@ const SearchBar = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex flex-row gap-3 items-center justify-center mb-8 px-2"
-    >
+    <form onSubmit={handleSubmit} className="flex flex-row gap-3 items-center justify-center mb-8 px-2">
+      
       <div className="relative flex-1">
+        
         <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
           🔍
         </span>
@@ -41,7 +40,7 @@ const SearchBar = () => {
       <Motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        type="submit"
+        type='submit'
         className="px-6 py-3 rounded-full bg-red-600 hover:bg-red-700
         text-white font-semibold shadow-lg hover:shadow-red-500/40
         transition duration-300 whitespace-nowrap"

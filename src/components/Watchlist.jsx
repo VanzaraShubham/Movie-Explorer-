@@ -1,10 +1,8 @@
-import { useSelector } from "react-redux";
-import MovieCard from "./MovieCard";
+import { useSelector } from 'react-redux';
+import MovieCard from './MovieCard';
 
 const Watchlist = () => {
-  const watchlist = useSelector(
-    (state) => state.movies.watchlist
-  );
+  const watchlist = useSelector((state) => state.movies.watchlist);
 
   if (watchlist.length === 0) {
     return (
@@ -15,12 +13,12 @@ const Watchlist = () => {
   }
 
   return (
-    <div className="bg-gray-950 min-h-screen px-8 py-6">
-      <h2 className="text-2xl font-bold text-white mb-6">
+    <div className="bg-gray-950 min-h-screen px-4 sm:px-6 md:px-12 py-8 text-white">
+      <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
         ⭐ Your Watchlist
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8">
         {watchlist.map((movie) => (
           <MovieCard key={movie.imdbID} movie={movie} />
         ))}

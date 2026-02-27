@@ -24,21 +24,21 @@ const MovieCard = ({ movie }) => {
         visible: { opacity: 1, y: 0 },
       }}
       transition={{ type: 'spring', stiffness: 200 }}
-      className="bg-gray-800 rounded-xl overflow-hidden shadow-lg"
+      className="bg-gray-800 rounded-xl overflow-hidden shadow-lg h-full flex flex-col"
     >
       {' '}
       {movie.Poster !== 'N/A' ? (
         <img
           src={movie.Poster}
           alt={movie.Title}
-          className="w-full h-64 object-cover transition duration-500 group-hover:scale-110"
+          className="w-full h-56 sm:h-64 object-cover transition duration-500 group-hover:scale-110"
         />
       ) : (
         <div className="h-64 flex items-center justify-center bg-gray-700 text-gray-400">
           No Image
         </div>
       )}
-      <div className="p-4">
+      <div className="p-4 flex flex-col flex-grow">
         <h3 className="text-lg font-semibold text-white truncate">
           {movie.Title}
         </h3>
@@ -49,7 +49,7 @@ const MovieCard = ({ movie }) => {
           whileHover={{ scale: 1.05 }}
           onClick={handleAdd}
           disabled={alreadyAdded}
-          className="w-full bg-red-500 py-2 rounded-lg"
+          className="w-full bg-red-500 py-2 rounded-lg mt-auto"
         >
           {alreadyAdded ? 'Added ✅' : 'Add to Watchlist'}
         </Motion.button>

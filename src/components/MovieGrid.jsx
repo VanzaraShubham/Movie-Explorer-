@@ -55,7 +55,7 @@ const MovieGrid = () => {
               transition: { staggerChildren: 0.05 },
             },
           }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 px-4"
         >
           {' '}
           {movies.map((movie) => (
