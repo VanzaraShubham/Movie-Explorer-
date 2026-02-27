@@ -1,71 +1,10 @@
-// import { useDispatch } from "react-redux";
-// import {
-//   removeFromWatchlist,
-//   toggleWatched,
-// } from "../features/movies/moviesSlice";
-
-// const WatchlistItem = ({ movie }) => {
-//   const dispatch = useDispatch();
-
-//   return (
-//     <div className="watchlist-item">
-      
-//       {/* Poster */}
-//       <img
-//         src={
-//           movie.Poster !== "N/A"
-//             ? movie.Poster
-//             : "https://via.placeholder.com/150"
-//         }
-//         alt={movie.Title}
-//         width="120"
-//       />
-
-//       {/* Movie Info */}
-//       <div>
-//         <h3>{movie.Title}</h3>
-//         <p>{movie.Year}</p>
-
-//         {/* Watched Status */}
-//         <p>
-//           Status:{" "}
-//           <strong>
-//             {movie.watched ? "✅ Watched" : "❌ Not Watched"}
-//           </strong>
-//         </p>
-
-//         {/* Toggle Watched Button */}
-//         <button
-//           onClick={() =>
-//             dispatch(toggleWatched(movie.imdbID))
-//           }
-//         >
-//           {movie.watched ? "Mark Unwatched" : "Mark Watched"}
-//         </button>
-
-//         {/* Delete Button */}
-//         <button
-//           onClick={() =>
-//             dispatch(removeFromWatchlist(movie.imdbID))
-//           }
-//           style={{ marginLeft: "10px", color: "red" }}
-//         >
-//           Delete
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default WatchlistItem;
-
 import { useDispatch } from "react-redux";
 import {
   removeFromWatchlist,
   toggleWatched,
 } from "../features/movies/moviesSlice";
 
-const WatchlistItem = ({ movie }) => {
+const WatchListItem = ({ movie }) => {
   const dispatch = useDispatch();
 
   return (
@@ -144,4 +83,4 @@ const WatchlistItem = ({ movie }) => {
   );
 };
 
-export default WatchlistItem;
+export default WatchListItem;

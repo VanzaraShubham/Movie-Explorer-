@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { motion as Motion, AnimatePresence } from 'framer-motion';
-import WatchlistItem from '../components/WatchlistItem';
+import WatchlistItem from '../components/WatchListItem';
 
 const WatchlistPage = () => {
   const watchlist = useSelector((state) => state.movies.watchlist);

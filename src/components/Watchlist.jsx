@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import MovieCard from "../components/MovieCard";
+import MovieCard from "./MovieCard";
 
 const Watchlist = () => {
   const watchlist = useSelector(

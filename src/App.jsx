@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Header from './components/Header';
 import Discover from './pages/Discover';
-import Watchlist from './pages/WatchlistPage';
+import Watchlist from './pages/WatchListPage';
 import LoginForm from './components/LoginForm';
 import { AnimatePresence, motion as Motion } from "framer-motion";
 
