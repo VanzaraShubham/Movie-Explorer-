@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Discover from './pages/Discover';
 import LoginForm from './components/LoginForm';
 import { AnimatePresence, motion as Motion } from "framer-motion";
-import WatchlistPage from './pages/WatchListPage';
+import WatchListPage from './pages/WatchListPage';
 
 function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -25,7 +25,7 @@ function App() {
           exit={{ opacity: 0, x: -40 }}
           transition={{ duration: 0.35 }}
         >
-          {currentPage === 'discover' ? <Discover /> : <WatchlistPage />}
+          {currentPage === 'discover' ? <Discover /> : <WatchListPage />}
         </Motion.div>
       </AnimatePresence>
     </>
