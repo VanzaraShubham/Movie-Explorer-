@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { motion as Motion, AnimatePresence } from 'framer-motion';
 import WatchlistItem from '../components/WatchListItem';
 
-const WatchlistPage = () => {
+const WatchListPage = () => {
   const watchlist = useSelector((state) => state.movies.watchlist);
 
   return (
@@ -56,4 +56,4 @@ const WatchlistPage = () => {
   );
 };
 
-export default WatchlistPage;
+export default WatchListPage;
