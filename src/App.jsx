@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Discover from './pages/Discover';
 import LoginForm from './components/LoginForm';
 import { AnimatePresence, motion as Motion } from "framer-motion";
-import WatchListPage from './pages/WatchListPage';
+import WatchListPage from './pages/Temp';
 
 function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
