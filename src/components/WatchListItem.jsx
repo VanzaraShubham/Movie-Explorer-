@@ -10,7 +10,6 @@ const WatchListItem = ({ movie }) => {
   return (
     <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col">
 
-      {/* Poster */}
       <div className="h-64 overflow-hidden">
         <img
           src={
@@ -23,20 +22,16 @@ const WatchListItem = ({ movie }) => {
         />
       </div>
 
-      {/* Content */}
       <div className="p-4 flex flex-col flex-grow">
 
-        {/* Title */}
         <h3 className="text-lg font-semibold text-white truncate">
           {movie.Title}
         </h3>
 
-        {/* Year */}
         <p className="text-gray-400 text-sm mb-2">
           {movie.Year}
         </p>
 
-        {/* Status */}
         <p className="text-sm mb-4">
           Status:{" "}
           <span
@@ -50,10 +45,8 @@ const WatchListItem = ({ movie }) => {
           </span>
         </p>
 
-        {/* Buttons */}
         <div className="mt-auto flex flex-col gap-2">
 
-          {/* Toggle Button */}
           <button
             onClick={() =>
               dispatch(toggleWatched(movie.imdbID))
@@ -67,7 +60,6 @@ const WatchListItem = ({ movie }) => {
             {movie.watched ? "Mark Unwatched" : "Mark Watched"}
           </button>
 
-          {/* Delete Button */}
           <button
             onClick={() =>
               dispatch(removeFromWatchlist(movie.imdbID))

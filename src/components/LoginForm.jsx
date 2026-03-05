@@ -1,12 +1,15 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { login } from "../features/auth/authSlice";
-import { motion as Motion } from "framer-motion";
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { login } from '../features/auth/authSlice';
+import { motion as Motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState('');
   const [error, setError] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -18,18 +21,17 @@ const LoginForm = () => {
     }
 
     dispatch(login(username));
+    navigate('/discover');
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-800 px-4">
-
       <Motion.div
         initial={{ opacity: 0, y: 40, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
         className="bg-white/10 backdrop-blur-lg p-10 rounded-2xl shadow-2xl w-full max-w-md border border-white/20"
       >
-      
         <Motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -44,14 +46,11 @@ const LoginForm = () => {
         </p>
 
         <form onSubmit={handleLogin} className="space-y-6">
-
           <Motion.div
             animate={error ? { x: [-8, 8, -6, 6, 0] } : {}}
             transition={{ duration: 0.4 }}
           >
-            <label className="block text-gray-300 mb-2">
-              Username
-            </label>
+            <label className="block text-gray-300 mb-2">Username</label>
 
             <input
               autoFocus
@@ -74,7 +73,6 @@ const LoginForm = () => {
           >
             Login
           </Motion.button>
-
         </form>
       </Motion.div>
     </div>
